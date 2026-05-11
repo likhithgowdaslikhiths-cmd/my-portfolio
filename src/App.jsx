@@ -1,22 +1,28 @@
-import Navbar from "./components/Navbar";
-import Hero from "./sections/Hero";
 import "./index.css";
+import Navbar from "./components/Navbar";
+import ScrollProgress from "./components/ScrollProgress";
+import Hero from "./sections/Hero";
 import About from "./sections/About";
+import Skills from "./sections/Skills";
 import Experience from "./sections/Experience";
-import Project from "./sections/Project";
+import Projects from "./sections/Project";
+import Services from "./sections/Services";
 import Contact from "./sections/Contact";
 
 function App() {
   return (
-    <div className="bg-gray-950 text-white">
+    <div className="relative min-h-screen overflow-x-hidden bg-midnight text-white">
+      <ScrollProgress />
       <Navbar />
-      <div id="hero">
+      <main className="relative">
         <Hero />
-        <About/>
-        <Experience/>
-        <Project/>
-        <Contact/>
-      </div>
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Services />
+        <Contact />
+      </main>
     </div>
   );
 }

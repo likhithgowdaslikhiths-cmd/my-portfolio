@@ -1,6 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #020617;
+}
+
+body {
+  background-color: #020617;
+  color: white;
+  background-image: radial-gradient(circle at top left, rgba(56,189,248,0.16), transparent 18%),
+    radial-gradient(circle at bottom right, rgba(139,92,246,0.12), transparent 20%);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(56,189,248,0.35);
+  color: white;
+}
+
 @keyframes textShimmer {
   0%, 100% {
     background-position: 0% 50%;
@@ -13,4 +45,17 @@
 .animate-textShimmer {
   background-size: 200% auto;
   animation: textShimmer 6s ease-in-out infinite;
+}
+
+@keyframes floatMove {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+.floating {
+  animation: floatMove 8s ease-in-out infinite;
 }

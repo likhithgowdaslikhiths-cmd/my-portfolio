@@ -3,110 +3,132 @@ import { FaBriefcase, FaGraduationCap, FaCertificate } from "react-icons/fa";
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="relative min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white py-24 px-6 overflow-hidden"
-    >
-      {/* Background glow animation */}
-      <motion.div
-        className="absolute w-[1000px] h-[1000px] bg-cyan-500/10 blur-[250px] rounded-full top-0 right-0"
-        animate={{
-          x: [0, 80, -80, 0],
-          y: [0, 40, -40, 0],
-        }}
-        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-      />
+    <section id="experience" className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 px-6 py-24 text-white lg:py-28">
+      <div className="absolute left-0 top-16 h-72 w-72 rounded-full bg-cyan-500/10 blur-[120px]" />
+      <div className="absolute right-0 bottom-16 h-80 w-80 rounded-full bg-blue-500/10 blur-[140px]" />
 
-      {/* Section Title */}
-      <motion.h2
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-5xl font-extrabold text-center mb-20 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(56,189,248,0.4)]"
-      >
-        Experience & Education
-      </motion.h2>
-
-      <div className="relative max-w-5xl mx-auto">
-        {/* Vertical timeline */}
-        <div className="absolute left-8 top-0 w-1 h-full bg-gradient-to-b from-cyan-500 to-blue-500 rounded-full"></div>
-
-        <div className="space-y-16">
-          {/* Job Experience */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <div className="mb-16 text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative pl-16"
+            className="text-sm uppercase tracking-[0.35em] text-cyan-300/80"
           >
-            <div className="absolute -left-[10px] flex items-center justify-center w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 text-gray-900 rounded-full shadow-lg shadow-cyan-500/30">
-              <FaBriefcase size={20} />
-            </div>
-
-            <div className="bg-gray-900/50 backdrop-blur-md p-6 rounded-2xl border border-gray-700 hover:border-cyan-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
-              <h3 className="text-2xl font-semibold text-cyan-400 mb-1">
-                Web Designer / Developer — DotXpertise
-              </h3>
-              <p className="text-gray-400 text-sm mb-3">
-                Mysore, India | Oct 2024 – Present
-              </p>
-              <ul className="list-disc list-inside text-gray-300 leading-relaxed">
-                <li>Designed and developed responsive, visually engaging websites using WordPress, HTML, CSS, and JavaScript.</li>
-                <li>Boosted website traffic by 30% through UX optimization and SEO best practices.</li>
-                <li>Customized layouts with Elementor and WPBakery, using Figma and Canva for modern visuals.</li>
-                <li>Applied UI/UX and SEO principles to enhance engagement and performance.</li>
-                <li>Developed Flutter-based login modules integrated with backend systems for seamless web–mobile flow.</li>
-              </ul>
-            </div>
-          </motion.div>
-
-          {/* Education - Degree */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative pl-16"
+            Professional Journey
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.9 }}
+            className="mt-4 text-5xl font-semibold tracking-[-0.035em] text-white md:text-6xl"
           >
-            <div className="absolute -left-[10px] flex items-center justify-center w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 text-gray-900 rounded-full shadow-lg shadow-blue-500/30">
-              <FaGraduationCap size={20} />
-            </div>
+            Experience & Impact
+          </motion.h2>
+        </div>
 
-            <div className="bg-gray-900/50 backdrop-blur-md p-6 rounded-2xl border border-gray-700 hover:border-cyan-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
-              <h3 className="text-2xl font-semibold text-cyan-400 mb-1">
-                Bachelor of Computer Applications (BCA)
-              </h3>
-              <p className="text-gray-400 text-sm mb-3">
-                SBRR Mahajana First Grade College — Mysore (2020 – 2023)
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                Focused on web technologies, programming, and software development.
-                Built academic-level applications and UI prototypes using React, WordPress, and MySQL.
-              </p>
-            </div>
-          </motion.div>
+        <div className="relative">
+          <div className="absolute left-10 top-0 h-full w-1 rounded-full bg-gradient-to-b from-cyan-400 to-blue-500 opacity-70" />
 
-          {/* Certification */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative pl-16"
-          >
-            <div className="absolute -left-[10px] flex items-center justify-center w-10 h-10 bg-gradient-to-r from-blue-400 to-cyan-500 text-gray-900 rounded-full shadow-lg shadow-cyan-400/30">
-              <FaCertificate size={20} />
-            </div>
+          <div className="space-y-14 pl-16">
+            <motion.article
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="absolute -left-6 top-6 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 shadow-glow">
+                <FaBriefcase size={22} />
+              </div>
+              <div className="rounded-[2rem] border border-cyan-400/10 bg-slate-950/90 p-8 shadow-premium transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:shadow-glow">
+                <p className="mb-4 text-sm uppercase tracking-[0.35em] text-cyan-300/80">Senior role</p>
+                <h3 className="text-2xl font-semibold text-white">SR Frontend Developer & IT Support — Worexa Technologies</h3>
+                <p className="mt-2 text-sm text-slate-400">Bangalore | Jan 12, 2026 – Present</p>
+                <ul className="mt-6 space-y-3 text-slate-300 leading-relaxed">
+                  <li>Develop modern responsive web applications using React.js and Next.js.</li>
+                  <li>Build scalable frontend architectures and reusable UI components.</li>
+                  <li>Manage deployment, optimization, debugging, and production support.</li>
+                  <li>Provide IT support and resolve technical issues across teams.</li>
+                  <li>Collaborate to improve application performance and UI/UX quality.</li>
+                </ul>
+                <div className="mt-6 rounded-3xl border border-cyan-400/10 bg-slate-900/80 p-5 text-slate-300">
+                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-300/80">Projects</p>
+                  <ul className="mt-3 space-y-2 text-slate-300">
+                    <li>Worexa Official Website — <a href="https://worexa.in/" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-200">worexa.in</a></li>
+                    <li>Maiora — <a href="https://maiora.worexa.in/" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-200">maiora.worexa.in</a></li>
+                    <li>Advocate Seva — <a href="https://advocateseva.com/" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-200">advocateseva.com</a></li>
+                  </ul>
+                </div>
+              </div>
+            </motion.article>
 
-            <div className="bg-gray-900/50 backdrop-blur-md p-6 rounded-2xl border border-gray-700 hover:border-cyan-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
-              <h3 className="text-2xl font-semibold text-cyan-400 mb-1">
-                Certifications & Awards
-              </h3>
-              <ul className="list-disc list-inside text-gray-300 leading-relaxed mt-2">
-                <li>Full Stack Java Developer — Besant Technologies</li>
-                <li>Hands-on training in React.js, TypeScript, and RESTful APIs.</li>
-                <li>Proficient in Redux, Zustand, and Context API for state management.</li>
-              </ul>
-            </div>
-          </motion.div>
+            <motion.article
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1, duration: 0.8 }}
+              className="relative"
+            >
+              <div className="absolute -left-6 top-6 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-purple-400 to-cyan-400 text-slate-950 shadow-glow">
+                <FaBriefcase size={22} />
+              </div>
+              <div className="rounded-[2rem] border border-cyan-400/10 bg-slate-950/90 p-8 shadow-premium transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:shadow-glow">
+                <p className="mb-4 text-sm uppercase tracking-[0.35em] text-cyan-300/80">Web Developer</p>
+                <h3 className="text-2xl font-semibold text-white">Web Developer — Entellusco</h3>
+                <p className="mt-2 text-sm text-slate-400">Bangalore | Nov 2025 – Jan 10, 2026</p>
+                <ul className="mt-6 space-y-3 text-slate-300 leading-relaxed">
+                  <li>Developed and deployed responsive websites from scratch to production.</li>
+                  <li>Handled frontend development, UI implementation, deployment, optimization, and client requirements.</li>
+                  <li>Built complete live production websites independently under tight timelines.</li>
+                </ul>
+                <div className="mt-6 rounded-3xl border border-cyan-400/10 bg-slate-900/80 p-5 text-slate-300">
+                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-300/80">Projects</p>
+                  <ul className="mt-3 space-y-2 text-slate-300">
+                    <li>Cloude Enclosure — <a href="https://www.cloudenclosure.com/" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-200">cloudenclosure.com</a></li>
+                    <li>Balan Interior — <a href="https://balan.entellusco.com/" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-200">balan.entellusco.com</a></li>
+                    <li>SV Tour Bus Landing Page — <a href="https://www.svtoursbus.com/" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-200">svtoursbus.com</a></li>
+                  </ul>
+                </div>
+              </div>
+            </motion.article>
+
+            <motion.article
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="relative"
+            >
+              <div className="absolute -left-6 top-6 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 text-slate-950 shadow-glow">
+                <FaGraduationCap size={22} />
+              </div>
+              <div className="rounded-[2rem] border border-cyan-400/10 bg-slate-950/90 p-8 shadow-premium transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:shadow-glow">
+                <p className="mb-4 text-sm uppercase tracking-[0.35em] text-cyan-300/80">Academic</p>
+                <h3 className="text-2xl font-semibold text-white">Bachelor of Computer Applications (BCA)</h3>
+                <p className="mt-2 text-sm text-slate-400">SBRR Mahajana First Grade College — Mysore (2020 – 2023)</p>
+                <p className="mt-4 text-slate-300 leading-relaxed">
+                  Focused on web technologies, programming, and software development. Built applications and UI prototypes using React, WordPress, and MySQL.
+                </p>
+              </div>
+            </motion.article>
+
+            <motion.article
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="relative"
+            >
+              <div className="absolute -left-6 top-6 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 text-slate-950 shadow-glow">
+                <FaCertificate size={22} />
+              </div>
+              <div className="rounded-[2rem] border border-cyan-400/10 bg-slate-950/90 p-8 shadow-premium transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:shadow-glow">
+                <p className="mb-4 text-sm uppercase tracking-[0.35em] text-cyan-300/80">Certifications</p>
+                <ul className="space-y-3 text-slate-300 leading-relaxed">
+                  <li>Full Stack Java Developer — Besant Technologies</li>
+                  <li>Hands-on training in React.js, TypeScript, and RESTful APIs.</li>
+                  <li>Proficient in Redux, Zustand, and Context API for state management.</li>
+                </ul>
+              </div>
+            </motion.article>
+          </div>
         </div>
       </div>
     </section>

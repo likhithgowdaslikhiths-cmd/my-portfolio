@@ -15,132 +15,92 @@ import {
   SiRedux,
   SiVite,
   SiFlutter,
-  SiMysql ,
+  SiMysql,
 } from "react-icons/si";
 import profilePic from "../assets/profile.jpg"; // replace with your image
 
+const techStack = [
+  { icon: <FaHtml5 />, name: "HTML5" },
+  { icon: <FaCss3Alt />, name: "CSS3" },
+  { icon: <FaJs />, name: "JavaScript" },
+  { icon: <SiTypescript />, name: "TypeScript" },
+  { icon: <FaReact />, name: "React.js" },
+  { icon: <SiRedux />, name: "Redux" },
+  { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+  { icon: <FaWordpress />, name: "WordPress" },
+  { icon: <FaNodeJs />, name: "Node.js" },
+  { icon: <SiVite />, name: "Vite" },
+  { icon: <SiMysql />, name: "MySQL" },
+  { icon: <SiFlutter />, name: "Flutter" },
+  { icon: <FaFigma />, name: "Figma" },
+  { icon: <FaGitAlt />, name: "Git" },
+];
+
 export default function About() {
-  const techStack = [
-    { icon: <FaHtml5 />, name: "HTML5" },
-    { icon: <FaCss3Alt />, name: "CSS3" },
-    { icon: <FaJs />, name: "JavaScript" },
-    { icon: <SiTypescript />, name: "TypeScript" },
-    { icon: <FaReact />, name: "React.js" },
-    { icon: <SiRedux />, name: "Redux" },
-    { icon: <SiTailwindcss />, name: "Tailwind CSS" },
-    { icon: <FaWordpress />, name: "WordPress" },
-    { icon: <FaNodeJs />, name: "Node.js" },
-    { icon: <SiVite />, name: "Vite" },
-    { icon: <SiMysql/>, name:"Mysql"},
-    { icon: <SiFlutter />, name: "Flutter" },
-    { icon: <FaFigma />, name: "Figma" },
-    { icon: <FaGitAlt />, name: "Git" },
-  ];
-
   return (
-    <section
-      id="about"
-      className="relative min-h-screen flex flex-col justify-center items-center 
-                 bg-gradient-to-b from-gray-900 to-gray-950 text-white px-6 py-20 overflow-hidden"
-    >
-      {/* Background glow blob */}
-      <motion.div
-        className="absolute w-[700px] h-[700px] bg-cyan-500/10 blur-[180px] rounded-full -top-32 -left-32"
-        animate={{
-          x: [0, 50, -50, 0],
-          y: [0, -30, 30, 0],
-        }}
-        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-      />
+    <section id="about" className="relative overflow-hidden px-6 py-24 text-white lg:py-28">
+      <div className="absolute left-0 top-12 h-72 w-72 rounded-full bg-cyan-500/10 blur-[120px]" />
+      <div className="absolute right-0 top-32 h-80 w-80 rounded-full bg-purple-500/10 blur-[140px]" />
 
-      {/* Heading */}
-      <motion.h2
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-4xl md:text-5xl font-bold mb-10 text-center 
-                   bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
-      >
-        About Me
-      </motion.h2>
+      <div className="relative z-10 mx-auto max-w-7xl space-y-16">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_0.8fr] lg:items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+          >
+            <p className="mb-4 text-sm uppercase tracking-[0.35em] text-cyan-300/80">About</p>
+            <h2 className="text-5xl font-semibold tracking-[-0.035em] text-white md:text-6xl">
+              A modern designer with a developer mindset.
+            </h2>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+              I’m <span className="font-semibold text-cyan-300">Likhith Gowda</span>, a Front-End Developer and Web Designer in Mysore, India. With over a year of experience at <span className="font-semibold text-cyan-300">DotXpertise</span>, I build premium websites that combine visual storytelling, performance, and strong brand identity.
+            </p>
 
-      {/* Content */}
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 z-10">
-        {/* Profile */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="relative w-48 h-48 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 
-                     p-[3px] shadow-[0_0_30px_rgba(56,189,248,0.4)]"
-        >
-          <img
-            src={profilePic}
-            alt="Likhith Gowda"
-            className="rounded-full w-full h-full object-cover"
-          />
-        </motion.div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-[2rem] border border-cyan-400/10 bg-slate-950/80 p-6 shadow-glow">
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Specialties</p>
+                <p className="mt-3 text-lg font-semibold text-white">React, Tailwind, WordPress</p>
+              </div>
+              <div className="rounded-[2rem] border border-cyan-400/10 bg-slate-950/80 p-6 shadow-glow">
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Approach</p>
+                <p className="mt-3 text-lg font-semibold text-white">Clean code, thoughtful design, scalable solutions</p>
+              </div>
+            </div>
+          </motion.div>
 
-        {/* Text */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+            className="relative mx-auto max-w-md"
+          >
+            <div className="absolute -right-10 top-8 h-24 w-24 rounded-full bg-cyan-500/10 blur-[90px]" />
+            <div className="rounded-[2rem] border border-cyan-400/10 bg-slate-950/90 p-1 shadow-premium">
+              <div className="rounded-[1.75rem] overflow-hidden bg-slate-900 px-6 py-6">
+                <img src={profilePic} alt="Likhith Gowda" className="h-full w-full rounded-[1.5rem] object-cover" />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 1 }}
-          className="flex-1 text-center md:text-left"
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.9 }}
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
         >
-          <p className="text-gray-300 leading-relaxed text-lg mb-6">
-            I’m <span className="text-cyan-400 font-semibold">Likhith Gowda</span>, a 
-            <span className="text-cyan-400"> Front-End Developer</span> and 
-            <span className="text-cyan-400"> Web Designer</span> from Mysore, India.
-            With over a year of experience at{" "}
-            <span className="text-cyan-400 font-medium">DotXpertise</span>, 
-            I specialize in building responsive, high-performance websites 
-            using <span className="text-cyan-400">React</span>,{" "}
-            <span className="text-cyan-400">Tailwind CSS</span>, and{" "}
-            <span className="text-cyan-400">WordPress</span>.
-          </p>
-
-          <p className="text-gray-400 text-base">
-            My passion lies in creating interactive and visually engaging user
-            interfaces that merge creativity with clean, maintainable code.
-            I enjoy exploring modern libraries like{" "}
-            <span className="text-cyan-400">Redux</span>,{" "}
-            <span className="text-cyan-400">TypeScript</span>,{" "}
-            <span className="text-cyan-400">Framer Motion</span>, and{" "}
-            <span className="text-cyan-400">Flutter</span> to craft elegant, scalable web experiences.
-          </p>
-
-          <p className="mt-4 text-gray-400 text-base">
-            My focus is on building visually delightful and user-friendly designs
-            that perform seamlessly across devices.
-          </p>
+          {techStack.map((tech, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-3 rounded-3xl border border-cyan-400/10 bg-slate-900/80 px-5 py-4 text-cyan-200 shadow-[0_0_30px_rgba(56,189,248,0.05)] transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-300/30"
+            >
+              <div className="text-2xl">{tech.icon}</div>
+              <span className="font-medium text-slate-100">{tech.name}</span>
+            </div>
+          ))}
         </motion.div>
       </div>
-
-      {/* Tech Stack with Hover Tooltips */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 1 }}
-        className="mt-16 flex flex-wrap justify-center gap-8 text-5xl text-cyan-400"
-      >
-        {techStack.map((tech, index) => (
-          <motion.div
-            key={index}
-            className="relative group cursor-pointer hover:text-blue-400 transition duration-300"
-            whileHover={{ scale: 1.2, rotate: 5 }}
-          >
-            {tech.icon}
-            <span
-              className="absolute bottom-[-2.5rem] left-1/2 -translate-x-1/2 
-                         text-sm bg-gray-800 text-gray-200 px-3 py-1 rounded-md 
-                         opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap"
-            >
-              {tech.name}
-            </span>
-          </motion.div>
-        ))}
-      </motion.div>
     </section>
   );
 }

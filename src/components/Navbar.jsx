@@ -9,28 +9,34 @@ export default function Navbar() {
   const links = [
     { name: "Home", to: "hero" },
     { name: "About", to: "about" },
+    { name: "Skills", to: "skills" },
     { name: "Experience", to: "experience" },
     { name: "Projects", to: "projects" },
+    { name: "Services", to: "services" },
     { name: "Contact", to: "contact" },
   ];
 
   return (
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-fit backdrop-blur-md bg-gray-900/40 border border-gray-700 rounded-full shadow-[0_0_25px_rgba(6,182,212,0.3)] px-6 py-3 transition-all duration-500">
-      {/* Desktop Menu */}
-      <ul className="hidden md:flex items-center gap-8">
+    <nav className="fixed inset-x-4 top-4 z-50 mx-auto flex max-w-6xl items-center justify-between rounded-full border border-cyan-400/20 bg-slate-950/50 px-6 py-3 backdrop-blur-3xl shadow-premium transition-all duration-500 md:px-10">
+      <div className="flex items-center gap-4 text-sm uppercase tracking-[0.4em] text-cyan-300/80">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-lg text-cyan-200 shadow-glow">LG</span>
+        <span className="font-semibold text-slate-100">Likhith</span>
+      </div>
+
+      <ul className="hidden items-center gap-8 md:flex">
         {links.map((link) => (
           <li key={link.name}>
             <Link
               to={link.to}
               smooth={true}
-              duration={500}
-              spy={true} // 👈 enables scroll spy
-              offset={-80} // 👈 adjusts highlight position
-              onSetActive={() => setActiveSection(link.to)} // 👈 triggers active state
-              className={`cursor-pointer text-lg font-medium transition-all ${
+              duration={600}
+              spy={true}
+              offset={-90}
+              onSetActive={() => setActiveSection(link.to)}
+              className={`cursor-pointer text-sm font-semibold tracking-[0.02em] transition-all ${
                 activeSection === link.to
-                  ? "text-cyan-400 drop-shadow-[0_0_10px_rgba(6,182,212,0.6)] border-b-2 border-cyan-400 pb-1"
-                  : "text-gray-300 hover:text-cyan-400"
+                  ? "text-cyan-300 drop-shadow-[0_0_18px_rgba(56,189,248,0.5)]"
+                  : "text-slate-300 hover:text-cyan-300"
               }`}
             >
               {link.name}
@@ -39,32 +45,31 @@ export default function Navbar() {
         ))}
       </ul>
 
-      {/* Mobile Menu Button */}
       <button
-        className="md:hidden text-gray-300 hover:text-cyan-400 text-2xl focus:outline-none"
+        className="md:hidden text-slate-300 text-2xl transition hover:text-cyan-300 focus:outline-none"
         onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation menu"
       >
         {menuOpen ? <FaTimes /> : <FaBars />}
       </button>
 
-      {/* Mobile Dropdown */}
       {menuOpen && (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-gray-900/95 border border-cyan-500/30 rounded-2xl backdrop-blur-md shadow-lg px-8 py-4">
-          <ul className="flex flex-col items-center gap-4">
+        <div className="absolute inset-x-4 top-full mt-4 rounded-3xl border border-cyan-400/20 bg-slate-950/95 px-6 py-5 backdrop-blur-3xl shadow-glow md:hidden">
+          <ul className="flex flex-col gap-4 text-center">
             {links.map((link) => (
               <li key={link.name}>
                 <Link
                   to={link.to}
                   smooth={true}
-                  duration={500}
+                  duration={600}
                   spy={true}
-                  offset={-80}
+                  offset={-90}
                   onSetActive={() => setActiveSection(link.to)}
                   onClick={() => setMenuOpen(false)}
-                  className={`cursor-pointer text-lg transition-all ${
+                  className={`block cursor-pointer text-base font-semibold transition-all ${
                     activeSection === link.to
-                      ? "text-cyan-400 drop-shadow-[0_0_10px_rgba(6,182,212,0.6)]"
-                      : "text-gray-300 hover:text-cyan-400"
+                      ? "text-cyan-300 drop-shadow-[0_0_15px_rgba(56,189,248,0.6)]"
+                      : "text-slate-300 hover:text-cyan-300"
                   }`}
                 >
                   {link.name}
