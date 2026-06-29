@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { useState, useEffect } from "react";
+import profilePic from "../assets/profile.jpg";
 
 // ── Staggered word reveal (safer than char-by-char) ───────────────────────────
 function RevealText({ children, delay = 0, className = "" }) {
