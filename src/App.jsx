@@ -13,7 +13,6 @@ function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-midnight text-white">
       <ScrollProgress />
-      <Navbar />
       <main className="relative">
         <Hero />
         <About />
