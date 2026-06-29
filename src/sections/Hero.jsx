@@ -343,7 +343,7 @@ export default function Hero() {
             {/* Image */}
             <div className="relative overflow-hidden rounded-[2.5rem] border border-white/[0.1] shadow-[0_40px_120px_rgba(0,0,0,0.75)]">
               <img
-                src="/src/assets/profile.jpg"
+              src={profilePic}
                 alt="Likhith Gowda — Frontend Developer"
                 className="h-[420px] w-full object-cover object-top lg:h-[480px]"
               />
