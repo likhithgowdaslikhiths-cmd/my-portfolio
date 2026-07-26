@@ -367,8 +367,8 @@ export default function Hero() {
               transition={{ delay: 1.9, duration: 0.5 }}
               className="absolute -bottom-8 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-2xl border border-white/[0.1] bg-[#080c14]/92 px-5 py-3 shadow-2xl backdrop-blur-md"
             >
-              <p className="text-center text-sm font-semibold text-white">Worexa Technologies</p>
-              <p className="text-center text-[10px] text-slate-400 mt-0.5">Bangalore · Nov 2025 – Present</p>
+              <p className="text-center text-sm font-semibold text-white">Dotxpertise</p>
+              <p className="text-center text-[10px] text-slate-400 mt-0.5">Mysore · Nov 2025 – Present</p>
             </motion.div>
           </motion.div>
         </div>

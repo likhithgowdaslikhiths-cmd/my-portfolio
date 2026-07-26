@@ -157,14 +157,14 @@ const metrics = [
 const experiences = [
   {
     role: "Senior Frontend Developer & IT Support",
-    company: "Worexa Technologies",
-    location: "Bangalore",
+    company: "DotXpertise",
+    location: "Mysore",
     period: "Nov 2025 – Present",
     accent: "border-violet-400",
     points: [
       "Architect React.js & Next.js component-based apps used in production dashboards and client portals.",
-      "Built reusable UI component library — cut development effort by 30% across parallel projects.",
-      "Led performance optimisation (lazy loading, code splitting, image compression) — Lighthouse +25%.",
+      "Built reusable UI component library cut development effort by 30% across parallel projects.",
+      "Led performance optimisation (lazy loading, code splitting, image compression) Lighthouse +25%.",
       "Independently designed, built & deployed 3 production websites end-to-end with 100% client satisfaction.",
     ],
   },
@@ -175,9 +175,9 @@ const experiences = [
     period: "Oct 2024 – Nov 2025",
     accent: "border-cyan-400",
     points: [
-      "Delivered 15+ responsive, SEO-optimised websites — drove 30% avg increase in organic client traffic.",
-      "Improved UI/UX consistency — lifted satisfaction scores by 25% and cut bounce rates by 18%.",
-      "Streamlined design-to-dev handoffs with Figma — cut iteration cycles by 30%.",
+      "Delivered 15+ responsive, SEO-optimised websites drove 30% avg increase in organic client traffic.",
+      "Improved UI/UX consistency lifted satisfaction scores by 25% and cut bounce rates by 18%.",
+      "Streamlined design-to-dev handoffs with Figma cut iteration cycles by 30%.",
     ],
   },
 ];
@@ -228,9 +228,9 @@ export default function About() {
               Frontend Developer based in{" "}
               <span className="font-semibold text-violet-300">Bangalore, India</span>{" "}
               with 2+ years building production-grade web apps. At{" "}
-              <span className="font-semibold text-white">Worexa Technologies</span>{" "}
+              <span className="font-semibold text-white">Dotxpertise</span>{" "}
               I architect scalable React/Next.js systems, own end-to-end deployments,
-              and consistently ship measurable performance wins — comfortable taking
+              and consistently ship measurable performance wins comfortable taking
               a feature from blank canvas to zero-downtime release.
             </p>
             {/* Trait pills */}
@@ -251,7 +251,7 @@ export default function About() {
             <p className="text-[10px] uppercase tracking-[0.3em] text-slate-500 mb-4">Quick facts</p>
             <div className="flex flex-col gap-2.5">
               {[
-                { label: "Role",          value: "Senior Frontend Dev",      sub: "Worexa Technologies"        },
+                { label: "Role",          value: "Senior Frontend Dev",      sub: "Dotxpertise"        },
                 { label: "Stack",         value: "React · Next.js · TS",     sub: "2+ yrs production"          },
                 { label: "Education",     value: "BCA",                      sub: "SBRR Mahajana, 2020–2023"   },
                 { label: "Cert",          value: "Full Stack Java",           sub: "Besant Technologies"        },

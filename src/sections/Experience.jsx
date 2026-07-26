@@ -111,7 +111,7 @@ export default function Experience() {
               {/* Company + active badge */}
               <div className="mb-3 flex flex-wrap items-center gap-3">
                 <span className="font-display text-2xl font-black text-white md:text-3xl">
-                  Worexa Technologies
+                  Dotxpertise
                 </span>
                 <span className="flex items-center gap-1.5 rounded-full border border-emerald-400/25 bg-emerald-400/8 px-3 py-1 text-[10px] font-medium text-emerald-300">
                   <span className="relative flex h-1.5 w-1.5">
@@ -124,7 +124,7 @@ export default function Experience() {
               <p className="text-base font-semibold text-violet-300">
                 Senior Frontend Developer & IT Support
               </p>
-              <p className="mt-1 text-sm text-slate-500">Bangalore · Nov 2025 – Present</p>
+              <p className="mt-1 text-sm text-slate-500">Mysore · Nov 2025 – Present</p>
             </div>
             <span className="rounded-2xl border border-violet-500/20 bg-violet-500/8 px-4 py-2 text-xs font-medium text-violet-300">
               React.js · Next.js · TypeScript

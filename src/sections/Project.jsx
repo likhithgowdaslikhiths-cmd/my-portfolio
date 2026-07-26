@@ -25,10 +25,10 @@ const featured = [
 ];
 
 const shipped = [
-  { name: "Worexa Official",       url: "https://worexa.in/",                    tech: ["React.js", "Next.js"],         accent: "violet" },
-  { name: "Maiora",                url: "https://maiora.worexa.in/",             tech: ["React.js", "Tailwind"],         accent: "fuchsia"},
+  // { name: "Worexa Official",       url: "https://worexa.in/",                    tech: ["React.js", "Next.js"],         accent: "violet" },
+  // { name: "Maiora",                url: "https://maiora.worexa.in/",             tech: ["React.js", "Tailwind"],         accent: "fuchsia"},
   { name: "Advocate Seva",         url: "https://advocateseva.com/",             tech: ["React.js", "Vercel"],           accent: "cyan"   },
-  { name: "Cloud Enclosure",       url: "https://www.cloudenclosure.com/",       tech: ["HTML", "CSS", "JavaScript"],    accent: "emerald"},
+  { name: "Cloud Enclosure",       url: "https://www.cloudenclosure.com/",       tech: ["React.js", "HTML", "CSS", "JavaScript"],    accent: "emerald"},
   { name: "Balan Interior",        url: "https://balan.entellusco.com/",         tech: ["WordPress", "Elementor"],       accent: "amber"  },
   { name: "Rangayaana School",     url: "https://rtm.org.in",                    tech: ["WordPress", "SEO"],             accent: "violet" },
   { name: "My Home Architect",     url: "https://myhomearchitect.co.in/",        tech: ["WordPress", "Elementor"],       accent: "cyan"   },
